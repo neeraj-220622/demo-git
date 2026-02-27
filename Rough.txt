@@ -1,0 +1,203 @@
+//File operations
+open();
+paremetres = filename, mode
+mode = r, w , a , x;
+r = read filename
+w = write filename
+a = apending text
+x = create the file 
+read() // specify no of characters
+readline()
+write()
+with open() as f :
+automatic closing
+close()
+
+//Regex operations
+import re
+Match object
+.start
+.end
+.span
+.string
+.group()
+re module functions
+re.compile() //variavble can be used in place of re ex :- re.compile(pattern)
+re.search()  //return the first occurence of matched string
+re.find_all() // return of list of matched strings
+re.match()  // returns the matched objects
+re.sub()  // replace the string [pattern, string, text]
+re.split() // spilting [pattern, text]
+meta characters
+[] -- set
+\ -- escape 
+. -- one or more
+* -- zero or more
+? -- one or xero
+^
+$
++
+()
+{}
+special squence
+/A
+\Z
+\b
+\B
+\d
+\D
+\w
+\W
+\s
+\S
+sets
+[arn]
+[a-z]
+[0-9]
+[0-5][0-9]
+[123]
+[^arn]
+[+]
+
+//numpy
+//50x times faster than the traditional list
+//contigious memory location storage 
+//phenomenon called locality reference 
+//numpy features
+import numpy as np
+arr = np.array()// can be created by using list
+0-D array
+1-D array
+2-D array
+multidimensional array
+parameters ndmin
+ndim // no of dimensions return
+np.shape // sizes
+np.array(object, dtype = none, copy = true, order = none, subok = false, ndmin = 0)
+datatypes
+boolean
+int
+intc
+intp
+int8
+int16
+float
+float64
+complex
+complex64
+complex128
+.type() // to know the type
+np.dtype()
+np.reshape()
+numpy.zeros()
+numpy.ones()
+np.arange(,size=())
+arr[start:stop:step]
+joining array np.concatenate((arr1,arr2),axis=)
+np/linespace(start,end, no of)
+vectorization or broadcasting
+from left side chech dimensions if atleast one or equal then ok
+np.sort()
+arr.T
+arr.transpose()
+filtering
+from numpy import random
+random.randint(100, size = (4,4))
+random.rand() //float 0 btw 1
+
+//Pandas
+import pandas as pd
+series
+pd.series() // index = []
+Data frames
+pd.DataFrame() //index = []
+pandas.DataFrame(data = NOne, index = NOne, columns = None, dtype= None, copy = None)
+pd.read_csv()
+pd.read_json()
+pd.read_excel()
+print(df.to_string())
+df.head()
+df.tail()
+df.describe() //include and exclude parameters
+df.info()
+df.columns
+df.count_values()
+df.unique()
+df.shape
+df.to_csv()..........
+
+//Web Scraping
+import urllib
+import selenium
+from bs4 import BeautifulSoup
+import requests
+robots.txt -- to know allowance
+from urllib.request openurl
+.read(),.decode(utf-8)
+
+//Importing
+pd.read_csv.........
+//Reaing the data in mutiple forms
+csv,txt,json.sql,zip,fsf, hdf5,......
+
+//cleaning
+//Missing Values solutions
+isnull()
+notnull()
+isnull().sum()axis = 1 for rows
+replacing by using zero
+fillna() method
+interpolate( method = "linear")// average of forward and backward
+forward filling , backward fill
+//Deleting the rows
+dropna() method
+missingvalues = df.dropna(how = any, axis = 0) // rows any -- atleast , all -- every value
+df[missingvalues >4].copy()
+df.duplicated()
+df.drop_duplicates()
+
+//preprocessing 
+//Data wrangling-- discovering, sturucturing, cleaning, enrichmrnt, validation, publidshing
+//Data Formating
+.astype() // cahnging into one datatypes
+select dtypes -- df.select_dtype(include = 'object').columns.tolist()
+.str.lower()
+.str.upper()
+str.replace( , , regex = true)
+str.strip()
+//Noramlization and standarization
+-- single feature scaling -- [0,1]
+-- z score -- [-3,3]
+-- logarithm 
+//Binning
+//equal frequency Binning
+//equal width Binning = min + w, min + 2w , ......... where w = min +max/no of bins
+
+//summarize the data
+info()
+describe()
+values_count()
+nunique()
+sum()
+count()
+min(),max(),median(),mode()
+agg()
+groupby()
+
+//correlation
+-- pearson -- linear relationship btw continous variavble
+-- kendall -- ordinal relational btw measurable quantity
+--- spearman -- monotonic relationship btw ordinal or continous variables
+Scypy
+-- import scypy.stats import stats
+corr - stats.pearson(df[],df[])
+corr = stats.kendalltou(df[],df[])
+corr = stats.spearman(df[].df[])
+numpy
+corr = np.corrcoef(df[],df[])
+method = 'pearson'
+pandas
+correlation = df[].corr(df[])
+overall correlationtable
+df.corr()
+method = 'pearson'
